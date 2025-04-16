@@ -138,6 +138,18 @@ button {
     color: #434455;
 }
 
+a[href^="mailto:"] {
+    color: #434455;
+    text-decoration: none;
+}
+
+a[href^="tel:"] {
+    color: #4d5ae5;
+    text-decoration: none;
+}
+.contact-items-bur {
+    color: #434455;
+}
 @media screen and (min-width: 768px) {
     .burger-btn {
         display: none;
@@ -386,17 +398,13 @@ button {
   color: #fff;
   background-color: #2e2f42;
   padding: 72px 0;
-  background-image:
-  linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-  image-set(
-    url("../images/people-office.jpg") 1x,
-    url("../images/people-office@2x.jpg") 2x);
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/bg-mobile@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin-left: auto;
   margin-right: auto;
-  max-width: 100%; /* або 320px якщо потрібно фіксовано */
+  max-width: 320px; 
 }
 .main-title {
     font-weight: 700;
@@ -434,8 +442,7 @@ button {
         color: #ffffff;
         background: #2e2f42;
         padding: 112px 0;
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), image-set(url("../images/people-office.jpg") 1x,
-                url("../images/people-office@2x.jpg") 2x);
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/bg-tablet@1x.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -471,8 +478,7 @@ button {
     .main-section {
         background-image:
             linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            image-set(url("../images/people-office.jpg") 1x,
-            url("../images/people-office@2x.jpg") 2x);
+            url(../images/bg-desktop@1x.jpg);
         }
     .main-section {
         padding: 188px 0;
@@ -485,6 +491,24 @@ button {
         margin-bottom: 48px;
     }
 }
+
+@media screen and (max-width: 767px) and (min-resolution: 192dpi) {
+    .main-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/bg-mobile@2x.jpg');
+    }
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+    .main-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/bg-tablet@2x.jpg');
+    }
+}
+@media screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+    .main-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/bg-desktop@2x.jpg');
+    }
+}
+
 
 .title-white {
     background-color: #ffffff;
@@ -605,7 +629,6 @@ button {
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 2px 1px rgba(46, 47, 66, 0.08);
     max-width: 264px;
-    margin-bottom: 72px;
 }
 
 .list-team:last-child {
@@ -686,7 +709,7 @@ button {
 }
 
 .four-section {
-    padding: 96px 16px;
+    padding: 0;
 }
 .portfolio-item {
     gap: 48px;
@@ -701,7 +724,7 @@ button {
 .list-four-sect {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 48px;
 
 }
 
@@ -818,6 +841,7 @@ button {
 .page-footer {
     background-color: #2e2f42;
     padding: 96px 0;
+
 }
 
 
@@ -831,6 +855,7 @@ button {
 
 .footer-container {
     margin-bottom: 0;
+    column-gap: 24px;
 }
 
 .footer-soc {
@@ -870,6 +895,7 @@ button {
     letter-spacing: 0.02em;
     text-align: left;
     max-width: 288px;
+    color: #f4f4fd;
 }
 
 
@@ -977,7 +1003,7 @@ button {
         align-items: flex-start;
         text-align: left;
         max-width: 264px;
-        margin: 0;
+        column-gap: 24px;       margin: 0;
     }
     .subscribe-p {
         text-align: left;
@@ -993,6 +1019,8 @@ button {
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: flex-start;
+        column-gap: 16px;
+        row-gap: 72px;
     }
 
     
@@ -1008,6 +1036,7 @@ button {
     .form-sbsrb {
         flex-direction: row;
         justify-content: flex-start;
+        gap: 24px;
     }
     
     .input-subscribe {
@@ -1019,15 +1048,21 @@ button {
         .footer-container {
             margin-right: 120px;
         }
+
+            .container {
+            max-width: 1158px;
+            }
         
         .footer-fdiv {
                 margin: 0 auto;
                 column-gap: 0;
-                padding: 0px;
+                padding: 0 15px;
+                
             }
         .page-footer {
                 background-color: #2e2f42;
-                padding:  156px 100px;
+                padding:  100px 0px;
+                margin: 0 auto;
             }
         .footer-soc {
             margin-right: 80px;
